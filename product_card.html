@@ -1,0 +1,181 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <!-- Mobile Port viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Mobile Port viewport -->
+    <title>
+        Product Card
+    </title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <style>
+        body {
+            padding: 40px 30px;
+            font-family: 'Quicksand', sans-serif;
+        }
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        
+        .product>img {
+            width: 295px;
+            height: 208px;
+        }
+        
+        .product_gallery>img {
+            width: 295px;
+            height: 208px;
+        }
+        
+        .product_details {
+            padding: 27px 5px;
+            width: 100%;
+        }
+        
+        .product {
+            box-sizing: border-box;
+            /* padding: 10px; */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)!important;
+            border-radius: 12px;
+            background: rgb(204 2 28);
+            color: white;
+        }
+        
+        .price,
+        .Check,
+        .bu {
+            padding: 10px;
+            border-radius: 25px;
+            background: rgb(255 255 255);
+            color: black;
+            font-size: 17px;
+        }
+        
+        .Check {
+            background: rgb(249 117 34);
+            cursor: pointer;
+            color: white;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)!important;
+        }
+        
+        .checked {
+            color: orange;
+        }
+        
+        .product_name {
+            font-size: 19px;
+        }
+        
+        .my_optinal {
+            display: none;
+            position: absolute;
+        }
+        
+        .bu {
+            background: rgb(255 255 255);
+            font-size: 14px;
+        }
+        
+        .bubble {
+            right: 11px;
+            transition: 0.7s;
+            top: -162px;
+            color: rgb(0 0 0);
+        }
+        
+        .product_gallery>img {
+            display: none;
+        }
+        
+        @media(max-width:1200px) {
+            .col-md-6 {
+                width: 50%;
+                float: left;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="product_main">
+                    <div class="product_data">
+                        <div class="product">
+                            <img src="proudct_img-1.jpg" class="img-responsive presnt">
+                            <div class="product_gallery">
+                                <img src="proudct_img-1.jpg" class="img-responsive presnt" id="P_g0">
+                                <img src="product_img-2.jpg" class="img-responsive" id="P_g1">
+                                <img src="product_img-3.jpg" class="img-responsive" id="P_g2">
+                                <img src="product_img-4.jpg" class="img-responsive" id="P_g3">
+                            </div>
+                            <!--/product_gallery-->
+                            <div class="more_button text-center">
+                                <input type="checkbox" class="i_g_f checked" onclick="mySlider(event,'P_g0')">
+                                <input type="checkbox" class="i_g_f checked" onclick="mySlider(event,'P_g1')">
+                                <input type="checkbox" class="i_g_f" onclick="mySlider(event,'P_g2')">
+                                <input type="checkbox" onclick="mySlider(event,'P_g3')" class="i_g_f">
+                            </div>
+                            <!--/More_button-->
+                            <div class="product_details">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                                <p class="category">Sports Shoes</p>
+                                <p class="product_name">ZTX Shoes(sports)</p>
+                                <div class="row">
+                                    <div class="col-md-6 text-center">
+                                        <p class="price">Rs. 3000/-</p>
+                                    </div>
+                                    <!--/Col-md-6-->
+                                    <div class="col-md-6 text-center">
+                                        <p class="Check" onclick="mycheck()"><b>Check Info</b></p>
+                                        <div class="my_optinal bounceInUp ">
+                                            <p class="bu"><i class="fa fa-whatsapp"></i> WhatsApp</p>
+                                            <p class="bu"><i class="fa fa-phone"></i> Call Now</p>
+                                            <p class="bu"><i class="fa fa-shopping-cart"></i> Online Order</p>
+                                        </div>
+                                        <!--/my_optinal-->
+                                    </div>
+                                    <!--/col-md-6-->
+                                </div>
+                                <!--/Product_button-row-->
+                            </div>
+                            <!--/Product_Details-->
+                        </div>
+                        <!--/product-->
+                    </div>
+                    <!--/product_data-->
+                </div>
+                <!--/Main_product-div-->
+            </div>
+            <!--/col-md-3-->
+        </div>
+        <!--/row-->
+    </div>
+    <!-- /container -->
+
+
+    <script src="java.js"></script>
+</body>
+<!--/body-->
+
+</html>
